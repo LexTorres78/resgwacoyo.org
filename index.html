@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resguardo Wacoyo — Pueblo Sikuani · Puerto Gaitán, Meta</title>
+<meta name="description" content="Resguardo Indígena Corocito Yopalito Wacoyo. Pueblo Sikuani de los Llanos Orientales. Cultura, deporte y turismo comunitario en el corazón del Meta, Colombia.">
+
+<meta property="og:title" content="Resguardo Wacoyo — Pueblo Sikuani">
+<meta property="og:description" content="Unidad, Cultura y Autonomía. Resguardo Indígena Corocito Yopalito Wacoyo.">
+<meta property="og:image" content="imgs/logo.png">
+
+<link rel="icon" type="image/png" href="imgs/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --sunset: #e8590c;
+  --sunset-deep: #b8420a;
+  --sunset-soft: #ff8c42;
+  --river: #1c4966;
+  --river-deep: #0d2c3f;
+  --river-soft: #3d7090;
+  --sun: #ffc94a;
+  --sun-deep: #e8a91e;
+  --earth: #8b4d2a;
+  --earth-deep: #5c2f15;
+  --bone: #fefcf7;
+  --bone-warm: #f7f1e3;
+  --bone-deep: #ede5d0;
+  --ink: #0a1018;
+  --ink-soft: #2a3038;
+  --shadow-warm: 0 30px 70px -25px rgba(184, 66, 10, 0.35);
+  --shadow-cool: 0 25px 60px -25px rgba(28, 73, 102, 0.4);
+  --shadow-soft: 0 12px 32px -14px rgba(10, 16, 24, 0.18);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+  background: var(--bone);
+  color: var(--ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+  font-weight: 400;
+}
+
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(254, 252, 247, 0.92);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease;
+}
+
+nav.scrolled {
+  padding: 0.7rem 3rem;
+  border-bottom-color: rgba(28, 73, 102, 0.08);
+  box-shadow: 0 4px 24px -12px rgba(0,0,0,0.06);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.logo-link img {
+  width: 54px;
+  height: auto;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.logo-link:hover img { transform: scale(1.1) rotate(-5deg); }
+
+.logo-text-block {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  line-height: 0.95;
+}
+
+.logo-text-block strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--river-deep);
+  display: block;
+}
+
+.logo-text-block small {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--sunset);
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; left: 0;
+  width: 0; height: 3px;
+  background: var(--sunset);
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:hover { color: var(--river-deep); }
+.nav-links a:hover::after { width: 100%; }
+
+.nav-cta {
+  background: var(--sunset);
+  color: var(--bone) !important;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  transition: all 0.3s;
+  box-shadow: 0 4px 0 var(--sunset-deep);
+}
+.nav-cta::after { display: none; }
+.nav-cta:hover {
+  background: var(--river-deep);
+  box-shadow: 0 4px 0 var(--river-soft);
+  transform: translateY(-1px);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--river-deep);
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  padding: 8rem 3rem 4rem;
+  gap: 4rem;
+  position: relative;
+  z-index: 5;
+  background: var(--bone);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -10%;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 80%;
+  background: radial-gradient(ellipse at center, var(--sunset-soft) 0%, transparent 70%);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.hero-band {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-band-1 {
+  left: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--sunset) 0%, var(--sunset) 30%, transparent 30%, transparent 35%, var(--sun) 35%, var(--sun) 65%, transparent 65%, transparent 70%, var(--river-deep) 70%, var(--river-deep) 100%);
+}
+
+.hero-content {
+  animation: fadeInUp 1s 0.2s both;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--sunset);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 28px; height: 2px;
+  background: var(--sunset);
+}
+
+.hero h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(3rem, 6.5vw, 5.8rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--river-deep);
+  margin-bottom: 1.8rem;
+}
+
+.hero h1 .highlight {
+  color: var(--sunset);
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1 .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 8%;
+  left: -2%;
+  right: -2%;
+  height: 18%;
+  background: var(--sun);
+  opacity: 0.4;
+  z-index: -1;
+  transform: skew(-3deg);
+}
+
+.hero h1 .underline-style {
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero h1 .underline-style::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--sunset);
+}
+
+.hero-tagline {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-style: italic;
+  font-size: 1.35rem;
+  color: var(--earth);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.hero p.lead {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.05rem 2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--sunset);
+  color: var(--bone);
+  box-shadow: 0 5px 0 var(--sunset-deep);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 var(--sunset-deep);
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 var(--sunset-deep);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--river-deep);
+  border: 2px solid var(--river-deep);
+}
+
+.btn-secondary:hover {
+  background: var(--river-deep);
+  color: var(--bone);
+}
+
+.btn-arrow { transition: transform 0.3s; }
+.btn:hover .btn-arrow { transform: translateX(5px); }
+
+.hero-pillars {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  border-top: 2px solid var(--bone-deep);
+  align-items: center;
+}
+
+.pillar-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+.pillar {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.15rem;
+  color: var(--river-deep);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.pillar-num {
+  font-size: 0.7rem;
+  color: var(--sunset);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.hero-visual {
+  position: relative;
+  animation: fadeInUp 1s 0.5s both;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  aspect-ratio: 4/5;
+}
+
+.hero-bg-block {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 100%;
+  height: 100%;
+  background: var(--sunset);
+  z-index: 0;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-sun {
+  position: absolute;
+  top: -50px;
+  left: -60px;
+  width: 140px;
+  height: 140px;
+  z-index: 2;
+  animation: spin 100s linear infinite;
+}
+
+.hero-sun svg { width: 100%; height: 100%; }
+
+.hero-stat-card {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  background: var(--bone);
+  padding: 1.5rem 1.8rem;
+  z-index: 3;
+  box-shadow: var(--shadow-cool);
+  border-left: 5px solid var(--sunset);
+  animation: fadeInUp 1s 0.8s both;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-stat-card .stat-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2.8rem;
+  color: var(--sunset);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.hero-stat-card .stat-text {
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 130px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section { position: relative; z-index: 5; }
+
+.section-header {
+  max-width: 760px;
+  margin: 0 auto 5rem;
+}
+
+.section-header.centered { text-align: center; }
+.section-header.centered .eyebrow { justify-content: center; }
+.section-header.centered .eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 2px;
+  background: var(--sunset);
+}
+
+.section-header h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--river-deep);
+  margin-top: 1rem;
+}
+
+.section-header h2 .highlight {
+  color: var(--sunset);
+  font-style: italic;
+}
+
+.section-header h2 .blue {
+  color: var(--river-deep);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.nosotros {
+  padding: 9rem 3rem;
+  background: var(--bone-warm);
+  overflow: hidden;
+  position: relative;
+}
+
+.nosotros::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  background: linear-gradient(180deg,
+    var(--sunset) 0%, var(--sunset) 25%,
+    var(--sun) 25%, var(--sun) 50%,
+    var(--earth) 50%, var(--earth) 75%,
+    var(--river-deep) 75%, var(--river-deep) 100%);
+}
+
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.nosotros-text h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--river-deep);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.nosotros-text p {
+  color: var(--ink-soft);
+  margin-bottom: 1.25rem;
+  font-size: 1.02rem;
+}
+
+.nosotros-text strong {
+  color: var(--sunset-deep);
+  font-weight: 700;
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 3rem;
+}
+
+.pillar-card {
+  background: var(--bone);
+  padding: 2rem 2.25rem;
+  border-left: 4px solid transparent;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  cursor: default;
+}
+
+.pillar-card:not(:last-child) {
+  border-bottom: 1px solid var(--bone-deep);
+}
+
+.pillar-card:nth-child(1) { border-left-color: var(--sunset); }
+.pillar-card:nth-child(2) { border-left-color: var(--sun-deep); }
+.pillar-card:nth-child(3) { border-left-color: var(--river); }
+
+.pillar-card:hover {
+  background: var(--bone-warm);
+  border-left-width: 12px;
+  padding-left: 1.5rem;
+}
+
+.pillar-card .pillar-big-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  width: 80px;
+}
+
+.pillar-card:nth-child(1) .pillar-big-num { color: var(--sunset); }
+.pillar-card:nth-child(2) .pillar-big-num { color: var(--sun-deep); }
+.pillar-card:nth-child(3) .pillar-big-num { color: var(--river); }
+
+.pillar-card .pillar-content h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--river-deep);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.pillar-card .pillar-content p {
+  font-size: 0.95rem;
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.nosotros-visual {
+  position: sticky;
+  top: 110px;
+}
+
+.nosotros-image-stack {
+  position: relative;
+}
+
+.nosotros-image-frame-deco {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background: var(--sunset);
+  z-index: 0;
+}
+
+.nosotros-image-main {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow-cool);
+}
+
+.nosotros-image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nosotros-image-secondary {
+  position: absolute;
+  bottom: -50px;
+  right: -30px;
+  width: 55%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border: 8px solid var(--bone);
+  box-shadow: var(--shadow-cool);
+  z-index: 2;
+}
+
+.nosotros-image-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-floating {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  background: var(--river-deep);
+  color: var(--bone);
+  padding: 1.5rem 1.8rem;
+  max-width: 280px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  z-index: 3;
+  box-shadow: var(--shadow-cool);
+  border-bottom: 4px solid var(--sun);
+}
+
+.quote-floating::before {
+  content: '"';
+  font-size: 4.5rem;
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  color: var(--sun);
+  line-height: 1;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  opacity: 0.9;
+}
+
+.banner {
+  padding: 6rem 3rem;
+  background: var(--river-deep);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 50%, rgba(232, 89, 12, 0.18), transparent 50%),
+    radial-gradient(circle at 15% 80%, rgba(255, 201, 74, 0.12), transparent 50%);
+}
+
+.banner-sun-deco {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  opacity: 0.08;
+  animation: spin 120s linear infinite reverse;
+}
+
+.banner-sun-deco svg { width: 100%; height: 100%; }
+
+.banner-content {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  z-index: 2;
+}
+
+.stat {
+  color: var(--bone);
+  padding: 1.5rem 1rem;
+  border-right: 1px solid rgba(254, 252, 247, 0.12);
+  text-align: left;
+}
+
+.stat:last-child { border-right: none; }
+
+.stat strong {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 700;
+  display: block;
+  color: var(--sun);
+  line-height: 0.95;
+  margin-bottom: 0.7rem;
+  letter-spacing: -0.04em;
+}
+
+.stat span {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--bone);
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.dimensiones {
+  padding: 9rem 0;
+  background: var(--bone);
+  overflow: hidden;
+  position: relative;
+}
+
+.dimensiones::before {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: -100px;
+  width: 250px;
+  height: 4px;
+  background: var(--sunset);
+  transform: rotate(-15deg);
+  opacity: 0.5;
+}
+
+.dimensiones .section-header {
+  padding: 0 3rem;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-card {
+  flex: 0 0 calc((100% - 3rem) / 3);
+  min-width: 0;
+  background: var(--bone-warm);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.carousel-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-cool);
+}
+
+.carousel-card-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-card:hover img { transform: scale(1.08); }
+
+.carousel-card-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(13, 44, 63, 0.92));
+}
+
+.carousel-card-tag {
+  position: absolute;
+  top: 1.4rem;
+  left: 1.4rem;
+  background: var(--bone);
+  color: var(--river-deep);
+  padding: 0.5rem 1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 2;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.carousel-card-tag.cultura { background: var(--sunset); color: var(--bone); }
+.carousel-card-tag.deporte { background: var(--sun); color: var(--river-deep); }
+.carousel-card-tag.turismo { background: var(--river-deep); color: var(--sun); }
+
+.carousel-card-number {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.3rem;
+  color: var(--bone);
+  opacity: 0.8;
+  font-weight: 700;
+  z-index: 2;
+  letter-spacing: -0.02em;
+}
+
+.carousel-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0; right: 0;
+  padding: 2rem 1.75rem;
+  z-index: 2;
+  color: var(--bone);
+}
+
+.carousel-card-content h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.carousel-card-content p {
+  font-size: 0.88rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding: 0 3rem;
+}
+
+.carousel-btn {
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--river-deep);
+  background: transparent;
+  color: var(--river-deep);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  border-radius: 0;
+}
+
+.carousel-btn:hover {
+  background: var(--sunset);
+  color: var(--bone);
+  border-color: var(--sunset);
+  transform: translateY(-2px);
+}
+
+.carousel-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 4px;
+  background: var(--bone-deep);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.carousel-dot.active {
+  width: 36px;
+  background: var(--sunset);
+}
+
+.autoplay-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.4rem 0.8rem;
+  background: var(--bone-warm);
+  transition: all 0.3s;
+}
+
+.autoplay-indicator:hover { background: var(--bone-deep); }
+
+.autoplay-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sunset);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.autoplay-indicator.paused .autoplay-dot {
+  background: var(--ink-soft);
+  animation: none;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.contacto {
+  padding: 9rem 3rem;
+  background: var(--bone-warm);
+  position: relative;
+}
+
+.contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg,
+    var(--sunset) 0%, var(--sunset) 33%,
+    var(--sun) 33%, var(--sun) 66%,
+    var(--river-deep) 66%, var(--river-deep) 100%);
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.contacto-info h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--river-deep);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
+}
+
+.contacto-info > p {
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+}
+
+.contacto-list {
+  list-style: none;
+}
+
+.contacto-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid var(--bone-deep);
+  transition: padding 0.3s;
+}
+
+.contacto-list li:last-child { border-bottom: none; }
+.contacto-list li:hover { padding-left: 0.5rem; }
+
+.contact-icon {
+  width: 48px; height: 48px;
+  background: var(--bone);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 2px solid var(--bone-deep);
+  transition: all 0.3s;
+}
+
+.contacto-list li:hover .contact-icon {
+  background: var(--sunset);
+  border-color: var(--sunset);
+}
+
+.contacto-list li:hover .contact-icon svg { stroke: var(--bone); }
+
+.contact-icon svg {
+  width: 20px; height: 20px;
+  stroke: var(--river-deep);
+  transition: stroke 0.3s;
+}
+
+.contacto-list strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sunset);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.contacto-list a, .contacto-list span {
+  color: var(--river-deep);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.contacto-list a:hover { color: var(--sunset); }
+
+.contacto-form {
+  background: var(--bone);
+  padding: 2.5rem;
+  border-top: 4px solid var(--sunset);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+}
+
+.contacto-form h4 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--river-deep);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.contacto-form > p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin-bottom: 2rem;
+}
+
+.form-group { margin-bottom: 1.25rem; }
+
+.form-group label {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--river-deep);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.95rem 1.1rem;
+  border: 2px solid var(--bone-deep);
+  background: var(--bone);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--river-deep);
+  transition: all 0.3s;
+  border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--sunset);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.contacto-form .btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+footer {
+  background: var(--river-deep);
+  color: var(--bone);
+  padding: 5rem 3rem 2rem;
+  position: relative;
+  z-index: 5;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(90deg,
+    var(--sunset) 0%, var(--sunset) 33%,
+    var(--sun) 33%, var(--sun) 66%,
+    var(--earth) 66%, var(--earth) 100%);
+}
+
+.footer-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand img {
+  width: 80px;
+  height: auto;
+  background: var(--bone);
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+
+.footer-brand h5 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--bone);
+  letter-spacing: -0.025em;
+}
+
+.footer-brand .footer-tagline {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-style: italic;
+  color: var(--sun);
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+}
+
+.footer-brand p {
+  font-size: 0.9rem;
+  opacity: 0.78;
+  max-width: 380px;
+  line-height: 1.6;
+}
+
+.footer-col h5 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--sunset);
+  letter-spacing: -0.01em;
+}
+
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 0.7rem; }
+
+.footer-col a {
+  color: var(--bone);
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.78;
+  transition: all 0.3s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+  color: var(--sun);
+}
+
+.footer-bottom {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(254, 252, 247, 0.12);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+  opacity: 0.7;
+}
+
+.nit-info {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .carousel-card { flex: 0 0 calc((100% - 1.5rem) / 2); }
+}
+
+@media (max-width: 968px) {
+  nav { padding: 0.85rem 1.5rem; }
+  nav.scrolled { padding: 0.65rem 1.5rem; }
+
+  .nav-links {
+    position: fixed;
+    top: 75px; left: 0; right: 0;
+    background: var(--bone);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    transform: translateY(-150%);
+    transition: transform 0.4s ease;
+    border-bottom: 4px solid var(--sunset);
+    box-shadow: var(--shadow-soft);
+    align-items: flex-start;
+  }
+
+  .nav-links.active { transform: translateY(0); }
+  .menu-toggle { display: block; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 7rem 1.5rem 4rem;
+    gap: 4rem;
+  }
+
+  .hero-visual { max-width: 420px; margin: 0 auto; width: 100%; }
+  .hero-stat-card { left: 0; bottom: -25px; }
+  .hero-sun { width: 100px; height: 100px; top: -30px; left: -30px; }
+
+  .nosotros, .contacto { padding: 6rem 1.5rem; }
+  .dimensiones { padding: 6rem 0; }
+  .dimensiones .section-header { padding: 0 1.5rem; }
+  .carousel-container { padding: 0 1.5rem; }
+  .carousel-controls { padding: 0 1.5rem; flex-wrap: wrap; }
+
+  .nosotros-grid, .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .nosotros-visual { position: static; }
+  .quote-floating { right: 0; max-width: 80%; top: -25px; }
+  .nosotros-image-secondary { right: 0; }
+  .nosotros-image-frame-deco { top: -10px; left: -10px; }
+
+  .banner { padding: 4rem 1.5rem; }
+
+  .banner-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 1rem;
+  }
+
+  .stat { border-right: none; }
+  .stat:nth-child(odd) { border-right: 1px solid rgba(254,252,247,0.12); }
+
+  .carousel-card { flex: 0 0 100%; }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .pillars-grid { grid-template-columns: 1fr; }
+
+  .section-header { margin-bottom: 3rem; }
+
+  .pillar-card .pillar-big-num { font-size: 2.8rem; width: 65px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.6rem; }
+  .hero-tagline { font-size: 1.15rem; }
+  .pillar-card { padding: 1.5rem; gap: 1rem; }
+  .pillar-card:hover { padding-left: 1rem; }
+  .contacto-form { padding: 2rem 1.5rem; }
+  .quote-floating { font-size: 1rem; padding: 1.2rem 1.4rem; }
+  .nosotros-text h3 { font-size: 1.7rem; }
+  .contacto-info h3 { font-size: 2rem; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+::selection {
+  background: var(--sunset);
+  color: var(--bone);
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#inicio" class="logo-link">
+    <img src="imgs/logo.png" alt="Logo Resguardo Wacoyo">
+    <div class="logo-text-block">
+      <strong>Wacoyo</strong>
+      <small>Pueblo Sikuani</small>
+    </div>
+  </a>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#dimensiones">Vivencias</a></li>
+    <li><a href="#contacto" class="nav-cta">Contáctanos</a></li>
+  </ul>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Menú">☰</button>
+</nav>
+
+<section class="hero" id="inicio">
+  <div class="hero-band hero-band-1"></div>
+
+  <div class="hero-content">
+    <span class="eyebrow">Pueblo Sikuani · Puerto Gaitán · Meta</span>
+    <h1>
+      Donde el <span class="highlight">sol</span> abraza la sabana y el <span class="underline-style">águila</span> vigila.
+    </h1>
+    <p class="hero-tagline">
+      Tres pilares, un resguardo, miles de vidas en defensa del territorio.
+    </p>
+    <p class="lead">
+      Somos el Resguardo Indígena Corocito Yopalito Wacoyo, comunidad del pueblo Sikuani de los Llanos Orientales de Colombia. Desde 1992 cuidamos nuestra tierra, fortalecemos nuestra cultura y ejercemos nuestra autonomía.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#nosotros" class="btn btn-primary">
+        Conoce nuestra historia
+        <span class="btn-arrow">→</span>
+      </a>
+      <a href="#dimensiones" class="btn btn-secondary">Vive Wacoyo</a>
+    </div>
+
+    <div class="hero-pillars">
+      <span class="pillar-label">Pilares</span>
+      <span class="pillar"><span class="pillar-num">/01</span> Unidad</span>
+      <span class="pillar"><span class="pillar-num">/02</span> Cultura</span>
+      <span class="pillar"><span class="pillar-num">/03</span> Autonomía</span>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-image-wrapper">
+      <div class="hero-sun">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#ffc94a">
+            <circle cx="100" cy="100" r="42"/>
+            <g>
+              <polygon points="100,5 95,38 105,38"/>
+              <polygon points="195,100 162,95 162,105"/>
+              <polygon points="100,195 105,162 95,162"/>
+              <polygon points="5,100 38,105 38,95"/>
+              <polygon points="167,33 144,55 151,62"/>
+              <polygon points="167,167 151,138 144,145"/>
+              <polygon points="33,167 55,144 62,151"/>
+              <polygon points="33,33 62,51 55,58"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero-bg-block"></div>
+      <div class="hero-image-frame">
+        <img src="imgs/joven-tradicional.jpg" alt="Persona del pueblo Sikuani con vestimenta tradicional">
+      </div>
+
+      <div class="hero-stat-card">
+        <span class="stat-num">33</span>
+        <span class="stat-text">Años cuidando el territorio</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="nosotros" id="nosotros">
+  <div class="section-header centered reveal">
+    <span class="eyebrow">Quiénes somos</span>
+    <h2>Un pueblo con <span class="highlight">raíces</span> en el llano</h2>
+  </div>
+
+  <div class="nosotros-grid">
+    <div class="nosotros-text reveal">
+      <h3>Resguardo Indígena Corocito Yopalito Wacoyo.</h3>
+      <p>
+        Somos comunidad del <strong>pueblo Sikuani</strong>, uno de los pueblos originarios de los Llanos Orientales de Colombia. Nuestro resguardo fue constituido legalmente por el INCORA mediante <strong>Resolución N° 80 del 18 de diciembre de 1992</strong> en el municipio de Puerto Gaitán, departamento del Meta.
+      </p>
+      <p>
+        Como autoridad indígena reconocida por el Ministerio del Interior, ejercemos gobierno propio bajo la dirección de un cabildo elegido por nuestra asamblea general. Nuestro horizonte es claro: <strong>unidad, cultura y autonomía</strong>.
+      </p>
+      <p>
+        Trabajamos para que cada generación encuentre en Wacoyo no solo un territorio, sino una manera de habitar el mundo: en armonía con la sabana, los ríos, el monte y la palabra de nuestros mayores.
+      </p>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <span class="pillar-big-num">01</span>
+          <div class="pillar-content">
+            <h4>Unidad</h4>
+            <p>Caminamos juntos como comunidad, fortaleciendo lazos entre familias y generaciones bajo un mismo horizonte.</p>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-big-num">02</span>
+          <div class="pillar-content">
+            <h4>Cultura</h4>
+            <p>Honramos la lengua, los saberes ancestrales, las artesanías y las tradiciones del pueblo Sikuani.</p>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <span class="pillar-big-num">03</span>
+          <div class="pillar-content">
+            <h4>Autonomía</h4>
+            <p>Ejercemos gobierno propio y decidimos libremente sobre nuestro territorio, nuestras decisiones y nuestro destino.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nosotros-visual reveal">
+      <div class="nosotros-image-stack">
+        <div class="quote-floating">
+          La tierra no se hereda de los padres, se cuida para los hijos.
+        </div>
+        <div class="nosotros-image-frame-deco"></div>
+        <div class="nosotros-image-main">
+          <img src="imgs/reunion-comunitaria.jpg" alt="Reunión comunitaria del Resguardo Wacoyo bajo maloca tradicional">
+        </div>
+        <div class="nosotros-image-secondary">
+          <img src="imgs/asamblea-maloca.jpg" alt="Asamblea de la comunidad Sikuani">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="banner-sun-deco">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#ffc94a">
+        <circle cx="100" cy="100" r="50"/>
+        <g>
+          <polygon points="100,0 92,40 108,40"/>
+          <polygon points="200,100 160,92 160,108"/>
+          <polygon points="100,200 108,160 92,160"/>
+          <polygon points="0,100 40,108 40,92"/>
+          <polygon points="170,30 142,55 152,65"/>
+          <polygon points="170,170 152,135 142,145"/>
+          <polygon points="30,170 55,142 65,152"/>
+          <polygon points="30,30 65,48 55,58"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="banner-content">
+    <div class="stat reveal">
+      <strong>1992</strong>
+      <span>Año de constitución</span>
+    </div>
+    <div class="stat reveal">
+      <strong>33</strong>
+      <span>Años de territorio</span>
+    </div>
+    <div class="stat reveal">
+      <strong>Sikuani</strong>
+      <span>Pueblo originario</span>
+    </div>
+    <div class="stat reveal">
+      <strong>2099</strong>
+      <span>Vigencia institucional</span>
+    </div>
+  </div>
+</section>
+
+<section class="dimensiones" id="dimensiones">
+  <div class="section-header centered reveal">
+    <span class="eyebrow">Lo que vivimos</span>
+    <h2>Cultura, <span class="highlight">deporte</span> y <span class="blue">turismo</span></h2>
+    <p style="margin-top: 1.2rem; color: var(--ink-soft); font-size: 1rem;">
+      Tres dimensiones que tejen la vida del resguardo. Conoce un poco de lo que sucede en Wacoyo cada día.
+    </p>
+  </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselTrack">
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag cultura">Cultura</span>
+          <span class="carousel-card-number">01</span>
+          <img src="imgs/joven-tradicional.jpg" alt="Vestimenta tradicional Sikuani">
+          <div class="carousel-card-content">
+            <h3>Identidad viva</h3>
+            <p>La vestimenta, los símbolos y la conexión espiritual con el llano siguen presentes en cada nueva generación.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag deporte">Deporte</span>
+          <span class="carousel-card-number">02</span>
+          <img src="imgs/futbol-arquero.jpg" alt="Partido de fútbol comunitario">
+          <div class="carousel-card-content">
+            <h3>El llano juega fútbol</h3>
+            <p>Las canchas de tierra son el corazón social del resguardo. Cada partido es encuentro, alegría y comunidad.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag turismo">Turismo</span>
+          <span class="carousel-card-number">03</span>
+          <img src="imgs/turismo-sopla-vientos.jpg" alt="Sopla Vientos - atardecer en el río">
+          <div class="carousel-card-content">
+            <h3>Sopla Vientos</h3>
+            <p>A 15 minutos en lancha, un mirador para atardeceres, avistamiento de aves y actividades náuticas.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag cultura">Cultura</span>
+          <span class="carousel-card-number">04</span>
+          <img src="imgs/asamblea-maloca.jpg" alt="Artesanía tradicional Sikuani">
+          <div class="carousel-card-content">
+            <h3>Tejidos del territorio</h3>
+            <p>Canastos y artesanías hechas con fibras del monte. Cada pieza guarda saberes transmitidos por las abuelas.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag deporte">Deporte</span>
+          <span class="carousel-card-number">05</span>
+          <img src="imgs/futbol-jugadores.jpg" alt="Jugadores en cancha de tierra">
+          <div class="carousel-card-content">
+            <h3>Torneos comunitarios</h3>
+            <p>El deporte fortalece el tejido social. Los torneos reúnen a comunidades vecinas en sana competencia.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag turismo">Turismo</span>
+          <span class="carousel-card-number">06</span>
+          <img src="imgs/turismo-bocas.jpg" alt="Bocas del Manacacías">
+          <div class="carousel-card-content">
+            <h3>Bocas del Manacacías</h3>
+            <p>Donde convergen los ríos Manacacías, Yucao y Meta. Avistamiento de toninas (delfín rosado) y aves.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag cultura">Cultura</span>
+          <span class="carousel-card-number">07</span>
+          <img src="imgs/artesania-canastos.jpg" alt="Asamblea con bohío tradicional">
+          <div class="carousel-card-content">
+            <h3>Asamblea y palabra</h3>
+            <p>El bohío y la maloca son el espacio donde la palabra circular construye decisiones colectivas.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag turismo">Turismo</span>
+          <span class="carousel-card-number">08</span>
+          <img src="imgs/turismo-playas.jpg" alt="Playas del Río Yucao">
+          <div class="carousel-card-content">
+            <h3>Playas del Río Yucao</h3>
+            <p>Atardeceres, deportes náuticos, pesca deportiva y avistamiento de aves a 30 minutos del municipio.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="carousel-card">
+        <div class="carousel-card-image">
+          <span class="carousel-card-tag cultura">Cultura</span>
+          <span class="carousel-card-number">09</span>
+          <img src="imgs/fauna-caiman.jpg" alt="Fauna del territorio - caimán">
+          <div class="carousel-card-content">
+            <h3>Fauna sagrada</h3>
+            <p>El caimán, el águila, la tonina: animales que tejen nuestra cosmovisión y nos hablan del territorio.</p>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn" id="prevBtn" aria-label="Anterior">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <div class="carousel-dots" id="carouselDots"></div>
+
+      <button class="carousel-btn" id="nextBtn" aria-label="Siguiente">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+
+      <span class="autoplay-indicator" id="autoplayToggle" title="Click para pausar/reanudar">
+        <span class="autoplay-dot"></span>
+        <span id="autoplayLabel">Auto</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="section-header centered reveal">
+    <span class="eyebrow">Caminemos juntos</span>
+    <h2>Conecta con <span class="highlight">Wacoyo</span></h2>
+  </div>
+
+  <div class="contacto-grid">
+    <div class="contacto-info reveal">
+      <h3>Estamos en Puerto Gaitán, Meta.</h3>
+      <p>
+        Si eres autoridad pública, organización social, aliado institucional, investigador o visitante respetuoso, escríbenos. La palabra es siempre el primer puente.
+      </p>
+
+      <ul class="contacto-list">
+        <li>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Sede administrativa</strong>
+            <span>Calle 12 A #15 C-35/36, Barrio San Ignacio<br>Puerto Gaitán, Meta — Colombia</span>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Teléfono</strong>
+            <a href="tel:+573177337746">+57 317 733 7746</a>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Correo institucional</strong>
+            <a href="mailto:wacoyoresguardo@gmail.com">wacoyoresguardo@gmail.com</a>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="4"/>
+              <path d="M4 21 Q 4 14 12 14 Q 20 14 20 21"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Gobernador del cabildo</strong>
+            <span>Eduardo Bejarano Gaitán</span>
+          </div>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <strong>Constituido</strong>
+            <span>Resolución INCORA N° 80 · 18 de diciembre de 1992</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contacto-form reveal">
+      <h4>Envíanos un mensaje</h4>
+      <p>Te responderemos al correo institucional del resguardo.</p>
+
+      <form id="contactForm" action="https://formsubmit.co/wacoyoresguardo@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web de Wacoyo">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+        </div>
+        <div class="form-group">
+          <label for="organizacion">Organización (opcional)</label>
+          <input type="text" id="organizacion" name="organizacion" placeholder="Resguardo, entidad, ONG...">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono (opcional)</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+57 ___ ___ ____">
+        </div>
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <select id="asunto" name="asunto" required>
+            <option value="">Selecciona...</option>
+            <option value="Consulta general">Consulta general</option>
+            <option value="Cooperación / alianza">Cooperación / alianza</option>
+            <option value="Turismo comunitario">Turismo comunitario</option>
+            <option value="Investigación académica">Investigación académica</option>
+            <option value="Acompañamiento">Acompañamiento institucional</option>
+            <option value="Prensa / medios">Prensa / medios</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required placeholder="Cuéntanos en qué podemos colaborar..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Enviar mensaje
+          <span class="btn-arrow">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="imgs/logo.png" alt="Logo Resguardo Wacoyo">
+      <h5>Resguardo Wacoyo</h5>
+      <p class="footer-tagline">Unidad — Cultura — Autonomía</p>
+      <p>
+        Resguardo Indígena Corocito Yopalito Wacoyo. Pueblo Sikuani de Puerto Gaitán, Meta. Cuidando el territorio desde 1992.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h5>Navegación</h5>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#dimensiones">Vivencias</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="mailto:wacoyoresguardo@gmail.com">wacoyoresguardo@gmail.com</a></li>
+        <li><a href="tel:+573177337746">+57 317 733 7746</a></li>
+        <li><a href="#contacto">Calle 12 A #15 C-35/36</a></li>
+        <li><a href="#contacto">Puerto Gaitán, Meta</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Resguardo Indígena Corocito Yopalito Wacoyo. Todos los derechos reservados.</span>
+    <span class="nit-info">NIT 900.114.321-4 · Entidad de derecho público</span>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 30);
+});
+
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('active'));
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+const track = document.getElementById('carouselTrack');
+const cards = track.querySelectorAll('.carousel-card');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const dotsContainer = document.getElementById('carouselDots');
+const autoplayToggle = document.getElementById('autoplayToggle');
+const autoplayLabel = document.getElementById('autoplayLabel');
+
+let currentIndex = 0;
+let cardsPerView = 3;
+let autoplayInterval = null;
+let isAutoplayActive = true;
+const AUTOPLAY_DELAY = 5000;
+
+function getCardsPerView() {
+  if (window.innerWidth <= 968) return 1;
+  if (window.innerWidth <= 1024) return 2;
+  return 3;
+}
+
+function getMaxIndex() {
+  return Math.max(0, cards.length - cardsPerView);
+}
+
+function updateCarousel() {
+  cardsPerView = getCardsPerView();
+  const maxIndex = getMaxIndex();
+  if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+  const cardWidth = cards[0].getBoundingClientRect().width;
+  const gap = 24;
+  const offset = currentIndex * (cardWidth + gap);
+  track.style.transform = `translateX(-${offset}px)`;
+
+  renderDots();
+
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex >= maxIndex;
+}
+
+function renderDots() {
+  const totalSlides = getMaxIndex() + 1;
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('button');
+    dot.classList.add('carousel-dot');
+    if (i === currentIndex) dot.classList.add('active');
+    dot.setAttribute('aria-label', `Ir a slide ${i + 1}`);
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      updateCarousel();
+      resetAutoplay();
+    });
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function next() {
+  const maxIndex = getMaxIndex();
+  if (currentIndex >= maxIndex) currentIndex = 0;
+  else currentIndex++;
+  updateCarousel();
+}
+
+function prev() {
+  if (currentIndex === 0) currentIndex = getMaxIndex();
+  else currentIndex--;
+  updateCarousel();
+}
+
+prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
+nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
+
+function startAutoplay() {
+  stopAutoplay();
+  if (isAutoplayActive) {
+    autoplayInterval = setInterval(next, AUTOPLAY_DELAY);
+  }
+}
+
+function stopAutoplay() {
+  if (autoplayInterval) {
+    clearInterval(autoplayInterval);
+    autoplayInterval = null;
+  }
+}
+
+function resetAutoplay() {
+  if (isAutoplayActive) startAutoplay();
+}
+
+autoplayToggle.addEventListener('click', () => {
+  isAutoplayActive = !isAutoplayActive;
+  if (isAutoplayActive) {
+    autoplayToggle.classList.remove('paused');
+    autoplayLabel.textContent = 'Auto';
+    startAutoplay();
+  } else {
+    autoplayToggle.classList.add('paused');
+    autoplayLabel.textContent = 'Pausa';
+    stopAutoplay();
+  }
+});
+
+const carouselContainer = document.querySelector('.carousel-container');
+carouselContainer.addEventListener('mouseenter', () => {
+  if (isAutoplayActive) stopAutoplay();
+});
+carouselContainer.addEventListener('mouseleave', () => {
+  if (isAutoplayActive) startAutoplay();
+});
+
+let touchStartX = 0;
+let touchEndX = 0;
+track.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+track.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) next();
+    else prev();
+    resetAutoplay();
+  }
+});
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(updateCarousel, 200);
+});
+
+updateCarousel();
+startAutoplay();
+
+if (window.location.search.includes('enviado=ok')) {
+  alert('¡Gracias por escribirnos! Tu mensaje fue enviado al Resguardo Wacoyo.');
+  history.replaceState(null, '', window.location.pathname);
+}
+</script>
+
+</body>
+</html>
